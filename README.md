@@ -39,7 +39,7 @@
 	
 ## 代码使用报告
 
-本项目 Fork 自 Twister HTML 工程（https://github.com/miguelfreitas/twister-html）（因为 GitHub 暂时上不去所以没有标记 Fork，后期会标记），并使用了开源项目 Bootstrap 的代码。
+本项目 Fork 自 Twister HTML 工程（https://github.com/miguelfreitas/twister-html ），并使用了开源项目 Bootstrap 的代码。
 
 运行本项目的代码会自动调用 Bootstrap 中文网的服务器，以调用开源项目 Bootstrap 的代码，若你不希望这样，你可以下载 Bootstrap 生产环境代码、并自己修改一下本程序的代码，以保证完全本地运行。（或者联系我）
 
