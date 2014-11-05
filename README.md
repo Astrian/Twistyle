@@ -1,77 +1,48 @@
-twister-html
-============
+# Twistyle V0.1 Alpha 说明
 
-HTML interface for [Twister](http://twister.net.co) [(github)](https://github.com/miguelfreitas/twister-core).
-To use it, clone this repo under ~/.twister/html like this:
+## 简介
 
-    git clone https://github.com/miguelfreitas/twister-html.git ~/.twister/html
-    
-If you'r on **Mac OS X** - clone to ${HOME}/Library/Application\ Support/Twister/html instead of ~/.twister/html
+由 Astrian 开发的 Twister 主题，比自带的主题更加漂亮和简洁。
 
-Contribute
-----------
+- 使用双栏式设计，页面利用率更高
+- 颜色使用更加清爽
+- 整体适应了移动浏览器访问
+- 一定程度增强了 Twister 中文翻译
+- 安装相对简单，只需替换文件即可
 
-Feel free to fork and send pull requests!
+## 安装方法
 
-To make it easier for us to accept your patches, please follow the conventional GitHub workflow:
+### OS X 安装方法（这个方法我保证能傻瓜到不能再傻瓜了）
 
-     # after forking, clone your repo
-     rm -rf ~/.twister/html
-     git clone git@github.com:yournickname/twister-html.git ~/.twister/html
-     cd ~/.twister/html
-     # CREATE A NEW BRANCH, specific to the fix you're implementing
-     git checkout -b my-fix
-     # ... make your changes ...
-     # commit and push
-     git commit -m "Fixing #1234 - bad foobarizer" && git push
-     # Now open a pull request from branch my-fix to miguelfreitas:master on github.
-     # Once the request is accepted, switch back to master and track upstream
-     git remote add upstream https://github.com/miguelfreitas/twister-html.git # one-off setup
-     git fetch upstream
-     git checkout master
-     git merge upstream/master # you should get a fast-forward message here
-     git push
+1. 点击 Dock 上的 Finder 图标（蓝白色的微笑小人）
+2. 选择屏幕顶部状态栏上的「前往」-「前往文件夹」，输入/Users/*Username*/.twister/（请记得替换你的用户名），回车
+3. 备份 html 到任意一个安全的位置
+4. 清空原来的 html 文件夹（或者你是直接移动整个文件夹的话，自己新建一个）
+5. 将本文件夹的内容全部拷贝到这个目录下
 
-Translations
-------------
+### Windows / Linux 安装方法
 
-If you want to add your own translation, edit `interface_localization.js` like this:
+实际上跟 OS X 的差不多，都是备份原有的 html 文件夹，然后替换新文件进去。
 
-1. fork the repo and create a new branch
+### Android 客户端安装方法
 
-        git clone git@github.com:yournickname/twister-html.git ~/.twister/html
-        cd ~/.twister/html
-        git checkout -b Klingon
-
-2. add your language to the list of available choices. You should use your ISO code here,
-it should match what the browser reports. The Klingon ISO is "tlh", so:
+需要改 apk 包。由于没有拆过官方包，此处略过不说。
 
 
-        var knownLanguages = ["en","nl","it","fr","ru","tlh"];`
-    
-For multi-region languages, if you want to catch them all, use only the first half 
-(e.g. to match it and it-ch, specify "it").
+## 更新注记
 
-3. add a new wordset block after  existing ones
+	V0.1 Alpha (2014-11-4发布)
 
+	第一版发布，还没伤筋动骨到 JavaScript 文件。
+	
+	本身具有的代码的 JavaScript 文件非常的复杂（因为拥有了数据交换功能），之前我也没太多接触过 JS，所以改起来很麻烦……记住，这个版本你稍微用一用就可以替换回来了，我觉得你和你的电脑会疯的。
+	
+## 代码使用报告
 
-        if(preferredLanguage == "tlh"){
-            polyglot.locale("tlh");
-            wordset = {
-                "Insults": "mu'qaD,
-                ....
-            }
-        }
+本项目 Fork 自 Twister HTML 工程（https://github.com/miguelfreitas/twister-html）（因为 GitHub 暂时上不去所以没有标记 Fork，后期会标记），并使用了开源项目 Bootstrap 的代码。
 
-4. stage all changes in file `interface_localization.js` 
+运行本项目的代码会自动调用 Bootstrap 中文网的服务器，以调用开源项目 Bootstrap 的代码，若你不希望这样，你可以下载 Bootstrap 生产环境代码、并自己修改一下本程序的代码，以保证完全本地运行。（或者联系我）
 
+## Bug 提交及意见反馈
 
-        git add interface_localization.js
-        
-5. commit & push
-
-
-        git commit -m "Klingon translation"
-        git push   
- 
-3. When opening the pull request on github. For any help, ping @toyg.
+目前可以访问我的[个人网站](http://www.astrianfm.com/mails)以「Twistyle Bug 提交」或「Twistyle 意见反馈」为主题告诉我。不需要高优先级邮件。
